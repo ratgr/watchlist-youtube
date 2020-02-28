@@ -1,0 +1,13 @@
+name: CI
+on: 
+  push:
+    branches:
+      - master
+jobs:
+  build:
+    runs-on: x64
+    steps:
+    - uses: actions/checkout@v2
+    - name: Typescript compiler
+      uses: iCrawl/action-tsc@v1
+    
